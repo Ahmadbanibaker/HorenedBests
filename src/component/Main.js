@@ -1,23 +1,33 @@
 import React, { Component } from 'react';
-import HornedBeasts from './HornedBeasts';
 import Data from './Data.json';
+import HornedBeasts from './HornedBeasts';
 
- class Main extends Component {
+class Main extends Component {
     render() {
-        
-           
+
+
         return (
-            
-                <div>
-               {Data.map(apps => {
-                   return  <HornedBeasts title={apps.title} imageUrl={apps.image_url} description={apps.description} />
-                   
-               })};
-            
+
+            <div className="row">
+
+                {Data.map(app => {
+                    return <HornedBeasts
+                        handleclose={this.props.handleclose}
+                        handleopen={this.props.handleopen}
+                        title={app.title}
+                        image_url={app.image_url}
+                        description={app.description}
+                        keyword={app.keyword}
+                        horns={app.horns}
+                    />
+
+                })};
+
             </div>
-    
+
         )
-    
-}}
+
+    }
+}
 
 export default Main

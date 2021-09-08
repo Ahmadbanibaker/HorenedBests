@@ -13,7 +13,7 @@ class Main extends Component {
                 {Data.map(app => {
                     return <HornedBeasts
                         handleclose={this.props.handleclose}
-                        handleopen={this.props.handleopen}
+                        handleOpen={this.props.handleOpen}
                         title={app.title}
                         image_url={app.image_url}
                         description={app.description}

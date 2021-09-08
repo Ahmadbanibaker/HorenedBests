@@ -10,7 +10,7 @@ class Main extends Component {
 
             <div className="row">
 
-                {Data.map(app => {
+                {this.props.Data.map(app => {
                     return <HornedBeasts
                         handleclose={this.props.handleclose}
                         handleOpen={this.props.handleOpen}
@@ -19,6 +19,8 @@ class Main extends Component {
                         description={app.description}
                         keyword={app.keyword}
                         horns={app.horns}
+                        
+                        
                     />
 
                 })};
